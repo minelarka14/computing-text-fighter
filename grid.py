@@ -51,25 +51,27 @@ class DisplayGrid:
         os.system('clear')
         print()
         self.displaygrid()
+        print()
         if abl: print('Player 1 has used the {} ability!'.format(abl.n))
 
     def __displayHealthBar(self):  # (private method) shows the 2 healthbars
         print('\nPlayer 1 Health: ', end='')
         for i in range(10):
             if i < (self.health1 // 10):
-                print('*', end=' ')
+                print('*', end='')
             else:
-                print('x', end=' ')
+                print('x', end='')
         print('\nPlayer 2 Health: ', end='')
         for j in range(10):
             if j < (self.health2 // 10):
-                print('*', end=' ')
+                print('*', end='')
             else:
-                print('x', end=' ')
+                print('x', end='')
 
     def displaygrid(self):  # Display full grid
         self.__displayGrid()
         self.__displayHealthBar()
+        print()
         print('\nAbilities: ', end='')
         for i in self.abilities:
             print('{} [{}],'.format(i.n, i.sk), end=' ')
