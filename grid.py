@@ -47,10 +47,11 @@ class DisplayGrid:
         └────────────────────────────────────────────────────────────────────────┘''')
         print()
 
-    def __resetDisplay(self):
+    def __resetDisplay(self, abl=None):
         os.system('clear')
         print()
         self.displaygrid()
+        if abl: print('Player 1 has used the {} ability!'.format(abl.n))
 
     def __displayHealthBar(self):  # (private method) shows the 2 healthbars
         print('\nPlayer 1 Health: ', end='')
@@ -97,7 +98,7 @@ class DisplayGrid:
         if abl.r[1] < self.findDistance() < abl.r[0]: # checking range
             self.health1 -= abl.sd
             self.health2 -= abl.d
-        self.__resetDisplay()
+        self.__resetDisplay(abl)
 
     def enterKeyboardStroke(self, inp):
         if inp == 'd':
