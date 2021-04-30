@@ -11,14 +11,6 @@ class DisplayGrid:
         self.abilities = abilities
 
     def __displayGrid(self):  # (private method) Shows grid of characters
-        # for i in range(self.yLength):
-        #     for j in range(self.xLength):
-        #         if (j, i) == self.pos1:
-        #             print('O', end='  ')
-        #         elif (j, i) == self.pos2:
-        #             print('x', end='  ')
-        #         else:
-        #             print('.', end='  ')
         print('''
         ┌────────────────────────────────────────────────────────────────────────┐
         │                                                                        │
