@@ -1,6 +1,16 @@
 import os
 
 class DisplayGrid:
+
+    # def prRed(skk): print("\033[91m {}\033[00m" .format(skk))
+    # def prGreen(skk): print("\033[92m {}\033[00m" .format(skk))
+    # def prYellow(skk): print("\033[93m {}\033[00m" .format(skk))
+    # def prLightPurple(skk): print("\033[94m {}\033[00m" .format(skk))
+    # def prPurple(skk): print("\033[95m {}\033[00m" .format(skk))
+    # def prCyan(skk): print("\033[96m {}\033[00m" .format(skk))
+    # def prLightGray(skk): print("\033[97m {}\033[00m" .format(skk))
+    # def prBlack(skk): print("\033[98m {}\033[00m" .format(skk))
+
     def __init__(self, xl: int, yl: int, abilities, pos1=(0, 0), pos2=(1, 1), sHealth:int = 100):
         self.xLength = xl
         self.yLength = yl
@@ -50,15 +60,15 @@ class DisplayGrid:
         print('\nPlayer 1 Health: ', end='')
         for i in range(10):
             if i < (self.health1 // 10):
-                print('█', end='')
+                print('\033[92m█\033[00m', end='')
             else:
-                print('░', end='')
+                print('\033[91m░\033[00m', end='')
         print('\nPlayer 2 Health: ', end='')
         for j in range(10):
             if j < (self.health2 // 10):
-                print('█', end='')
+                print('\033[92m█\033[00m', end='')
             else:
-                print('░', end='')
+                print('\033[91m░\033[00m', end='')
 
     def displaygrid(self):  # Display full grid
         self.__displayGrid()
