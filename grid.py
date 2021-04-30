@@ -58,15 +58,15 @@ class DisplayGrid:
         print('\nPlayer 1 Health: ', end='')
         for i in range(10):
             if i < (self.health1 // 10):
-                print('*', end='')
+                print('█', end='')
             else:
-                print('x', end='')
+                print('░', end='')
         print('\nPlayer 2 Health: ', end='')
         for j in range(10):
             if j < (self.health2 // 10):
-                print('*', end='')
+                print('█', end='')
             else:
-                print('x', end='')
+                print('░', end='')
 
     def displaygrid(self):  # Display full grid
         self.__displayGrid()
